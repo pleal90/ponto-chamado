@@ -14,6 +14,14 @@ namespace Ponto_Chamados
         public SqlConnection conectaBanco(){
             SqlConnection sql = new SqlConnection(c);
             return sql;
+            sql.Open();
+        }
+
+        public SqlConnection fechaBanco()
+        {
+            SqlConnection sql = new SqlConnection(c);
+            return sql;
+            sql.Close();
         }
 
         public SqlDataAdapter select(string cons)
