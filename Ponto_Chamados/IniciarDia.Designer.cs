@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IniciarDia));
             this.label1 = new System.Windows.Forms.Label();
             this.cbxProj = new System.Windows.Forms.ComboBox();
             this.btnConfirma = new System.Windows.Forms.Button();
@@ -102,6 +103,7 @@
             this.Controls.Add(this.btnConfirma);
             this.Controls.Add(this.cbxProj);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "IniciarDia";
             this.Text = "Iniciar Dia";
             this.Load += new System.EventHandler(this.SelecionaProjeto_Load);

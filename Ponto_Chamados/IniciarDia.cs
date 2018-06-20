@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Ponto_Chamados
 {
@@ -28,7 +29,8 @@ namespace Ponto_Chamados
             cbxProj.DataSource = dt1;
             cbxProj.DisplayMember = "COD_PROJETO"; 
             cbxProj.ValueMember = "ID_PROJETO";
-
+            conexao.fechaBanco();
+      
             //Carregar ComboBox DO USUÁRIO
             
             string q2 = "SELECT * FROM USUARIO";
@@ -40,24 +42,55 @@ namespace Ponto_Chamados
             cbxUsua.DataSource = dt2;
             cbxUsua.DisplayMember = "NM_USUARIO";
             cbxUsua.ValueMember = "ID_USUARIO";
+            conexao.fechaBanco();            
           }
-
+        
         private void btnConfirma_Click(object sender, EventArgs e)
         {
-            try
+           try
             {
-                string d, h, t, p, u;
+                Datahora datahora;
+                string d, h, t;
                 d = DateTime.Now.ToString("dd/MM/yyyy");
                 h = DateTime.Now.ToString("HH:mm");
                 t = "01";
-                p = cbxProj.Text.ToString();
-                u = cbxUsua.Text.ToString();
-                Datahora datahora;
-                datahora = new Datahora(d, h, t, p, u);
-                datahora.IniciaDiaBD();
-                MessageBox.Show("Hora Adicionada com sucesso  " + datahora);
-                datahora.IniciaDiaBD();
-            }
+
+                    //localiza o projeto no banco
+
+                    Conexao conexao = new Conexao();
+                    conexao.conectaBanco();
+                    DataTable dt = new DataTable();
+
+                    string pcon = null;
+                    string con_sql = null;
+
+                    con_sql = "SELECT ID_PROJETO FROM PROJETO WHERE COD_PROJETO like '%"+cbxProj.Text+"%'";
+                    conexao.select(con_sql).Fill(dt);
+                    foreach (DataRow item in dt.Rows)
+                    {
+                        pcon = item["ID_PROJETO"].ToString();
+                    }
+                    conexao.fechaBanco();
+                    MessageBox.Show("VARIÁVEL DE TESTE PROJETO: " + pcon);
+
+                    //localiza o usuário no banco
+
+                    con_sql = null;
+                    string ucon = null;
+
+                    con_sql = "SELECT ID_USUARIO FROM USUARIO WHERE NM_USUARIO like '%"+cbxUsua.Text+"%'";
+                    conexao.select(con_sql).Fill(dt);
+                    foreach (DataRow item in dt.Rows)
+                    {
+                        ucon = item["ID_USUARIO"].ToString();
+                    }
+                    conexao.fechaBanco();
+                    MessageBox.Show("VARIÁVEL DE TESTE USUÁRIO: " + ucon);
+                    
+                    datahora = new Datahora(d, h, t, pcon, ucon);
+                    datahora.IniciaDiaBD();
+                    MessageBox.Show("Hora Adicionada com sucesso  " + datahora);
+             }
             catch (Exception err)
             {
                 MessageBox.Show("Erro: " + err.ToString());

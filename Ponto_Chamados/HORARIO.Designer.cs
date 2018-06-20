@@ -39,7 +39,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.cbxProj = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.cbxUsuario = new System.Windows.Forms.ComboBox();
+            this.cbxUsua = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btnConfirmar
@@ -112,7 +112,6 @@
             // 
             this.cbxTipo.FormattingEnabled = true;
             this.cbxTipo.Items.AddRange(new object[] {
-            "ENTRADA",
             "SAÍDA ALMOÇO",
             "RETORNO ALMOÇO",
             "SAÍDA"});
@@ -152,25 +151,25 @@
             this.label4.TabIndex = 15;
             this.label4.Text = "Usuário";
             // 
-            // cbxUsuario
+            // cbxUsua
             // 
-            this.cbxUsuario.FormattingEnabled = true;
-            this.cbxUsuario.Items.AddRange(new object[] {
+            this.cbxUsua.FormattingEnabled = true;
+            this.cbxUsua.Items.AddRange(new object[] {
             "ENTRADA",
             "SAÍDA ALMOÇO",
             "RETORNO ALMOÇO",
             "SAÍDA"});
-            this.cbxUsuario.Location = new System.Drawing.Point(50, 88);
-            this.cbxUsuario.Name = "cbxUsuario";
-            this.cbxUsuario.Size = new System.Drawing.Size(121, 21);
-            this.cbxUsuario.TabIndex = 16;
+            this.cbxUsua.Location = new System.Drawing.Point(50, 88);
+            this.cbxUsua.Name = "cbxUsua";
+            this.cbxUsua.Size = new System.Drawing.Size(121, 21);
+            this.cbxUsua.TabIndex = 16;
             // 
             // HORARIO
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(183, 177);
-            this.Controls.Add(this.cbxUsuario);
+            this.Controls.Add(this.cbxUsua);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.cbxProj);
             this.Controls.Add(this.label3);
@@ -203,6 +202,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbxProj;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cbxUsuario;
+        private System.Windows.Forms.ComboBox cbxUsua;
     }
 }

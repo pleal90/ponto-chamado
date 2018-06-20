@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cad_projeto));
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnConfirmar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -100,6 +101,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.btnCancelar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Cad_projeto";
             this.Text = "Cad_projeto";
             this.Load += new System.EventHandler(this.Cad_projeto_Load);

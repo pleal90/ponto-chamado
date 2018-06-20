@@ -28,11 +28,11 @@ namespace Ponto_Chamados
                 //Adicionando o valor das textBox nos parametros do comando
                 comando.Parameters.Add(new SqlParameter("@usuario", nome_usua));
                 //Abre a conexão
-                conexao.conectaBanco().Open();
+                conexao.conectaBanco();
                 //executa o comando com os parametros que foram adicionados acima
                 comando.ExecuteNonQuery();
                 //fecha a conexao
-                conexao.conectaBanco().Close();
+                conexao.fechaBanco();
                 // referente ao msgbox
                 MessageBox.Show("Cadastrado com Sucesso");
                 

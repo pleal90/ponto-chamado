@@ -38,9 +38,9 @@ namespace Ponto_Chamados
             Conexao conexao = new Conexao();
             try
             {
-                conexao.conectaBanco().Open();
+                conexao.conectaBanco();
                 MessageBox.Show("Conectado com sucesso");
-                conexao.conectaBanco().Close();
+                conexao.fechaBanco();
             }
             catch (Exception err)
             {

@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PCDataSet1_PONTO" targetNamespace="http://tempuri.org/PCDataSet1_PONTO.xsd" xmlns:mstns="http://tempuri.org/PCDataSet1_PONTO.xsd" xmlns="http://tempuri.org/PCDataSet1_PONTO.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="PCConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="PCConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Ponto_Chamados.Properties.Settings.GlobalReference.Default.PCConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DGV_PONTOTableAdapter" GeneratorDataComponentClassName="DGV_PONTOTableAdapter" Name="DGV_PONTO" UserDataComponentName="DGV_PONTOTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="PCConnectionString (Settings)" DbObjectName="PC.dbo.DGV_PONTO" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT DATA_PONTO, ENTRADA, [SAIDA ALMOÇO], [RETORNO ALMOÇO], SAIDA, NM_USUARIO, COD_PROJETO FROM dbo.DGV_PONTO</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="DATA_PONTO" DataSetColumn="DATA_PONTO" />
+              <Mapping SourceColumn="ENTRADA" DataSetColumn="ENTRADA" />
+              <Mapping SourceColumn="SAIDA ALMOÇO" DataSetColumn="SAIDA ALMOÇO" />
+              <Mapping SourceColumn="RETORNO ALMOÇO" DataSetColumn="RETORNO ALMOÇO" />
+              <Mapping SourceColumn="SAIDA" DataSetColumn="SAIDA" />
+              <Mapping SourceColumn="NM_USUARIO" DataSetColumn="NM_USUARIO" />
+              <Mapping SourceColumn="COD_PROJETO" DataSetColumn="COD_PROJETO" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="PCDataSet1_PONTO" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="PCDataSet1_PONTO" msprop:Generator_UserDSName="PCDataSet1_PONTO">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DGV_PONTO" msprop:Generator_TableClassName="DGV_PONTODataTable" msprop:Generator_TableVarName="tableDGV_PONTO" msprop:Generator_TablePropName="DGV_PONTO" msprop:Generator_RowDeletingName="DGV_PONTORowDeleting" msprop:Generator_RowChangingName="DGV_PONTORowChanging" msprop:Generator_RowEvHandlerName="DGV_PONTORowChangeEventHandler" msprop:Generator_RowDeletedName="DGV_PONTORowDeleted" msprop:Generator_UserTableName="DGV_PONTO" msprop:Generator_RowChangedName="DGV_PONTORowChanged" msprop:Generator_RowEvArgName="DGV_PONTORowChangeEvent" msprop:Generator_RowClassName="DGV_PONTORow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DATA_PONTO" msprop:Generator_ColumnVarNameInTable="columnDATA_PONTO" msprop:Generator_ColumnPropNameInRow="DATA_PONTO" msprop:Generator_ColumnPropNameInTable="DATA_PONTOColumn" msprop:Generator_UserColumnName="DATA_PONTO" type="xs:dateTime" />
+              <xs:element name="ENTRADA" msprop:Generator_ColumnVarNameInTable="columnENTRADA" msprop:Generator_ColumnPropNameInRow="ENTRADA" msprop:Generator_ColumnPropNameInTable="ENTRADAColumn" msprop:Generator_UserColumnName="ENTRADA" type="xs:duration" minOccurs="0" />
+              <xs:element name="SAIDA_x0020_ALMOÇO" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSAIDA_ALMOÇO" msprop:Generator_ColumnPropNameInRow="SAIDA_ALMOÇO" msprop:Generator_ColumnPropNameInTable="SAIDA_ALMOÇOColumn" msprop:Generator_UserColumnName="SAIDA ALMOÇO" type="xs:duration" minOccurs="0" />
+              <xs:element name="RETORNO_x0020_ALMOÇO" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnRETORNO_ALMOÇO" msprop:Generator_ColumnPropNameInRow="RETORNO_ALMOÇO" msprop:Generator_ColumnPropNameInTable="RETORNO_ALMOÇOColumn" msprop:Generator_UserColumnName="RETORNO ALMOÇO" type="xs:duration" minOccurs="0" />
+              <xs:element name="SAIDA" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSAIDA" msprop:Generator_ColumnPropNameInRow="SAIDA" msprop:Generator_ColumnPropNameInTable="SAIDAColumn" msprop:Generator_UserColumnName="SAIDA" type="xs:duration" minOccurs="0" />
+              <xs:element name="NM_USUARIO" msprop:Generator_ColumnVarNameInTable="columnNM_USUARIO" msprop:Generator_ColumnPropNameInRow="NM_USUARIO" msprop:Generator_ColumnPropNameInTable="NM_USUARIOColumn" msprop:Generator_UserColumnName="NM_USUARIO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="COD_PROJETO" msprop:Generator_ColumnVarNameInTable="columnCOD_PROJETO" msprop:Generator_ColumnPropNameInRow="COD_PROJETO" msprop:Generator_ColumnPropNameInTable="COD_PROJETOColumn" msprop:Generator_UserColumnName="COD_PROJETO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

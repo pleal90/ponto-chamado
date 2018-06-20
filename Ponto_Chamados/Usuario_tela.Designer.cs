@@ -29,28 +29,29 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Usuario_tela));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cadastrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ID_USUARIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nMUSUARIODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uSUARIOBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.pCDataSet_usuario = new Ponto_Chamados.PCDataSet_usuario();
             this.uSUARIOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pCDataSet = new Ponto_Chamados.PCDataSet();
             this.uSUARIOTableAdapter = new Ponto_Chamados.PCDataSetTableAdapters.USUARIOTableAdapter();
             this.button1 = new System.Windows.Forms.Button();
             this.usuarioTableAdapter1 = new Ponto_Chamados.PCDataSetTableAdapters.USUARIOTableAdapter();
             this.usuarioTableAdapter2 = new Ponto_Chamados.PCDataSetTableAdapters.USUARIOTableAdapter();
-            this.ID_USUARIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nMUSUARIODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pCDataSet_usuario = new Ponto_Chamados.PCDataSet_usuario();
-            this.uSUARIOBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.uSUARIOTableAdapter3 = new Ponto_Chamados.PCDataSet_usuarioTableAdapters.USUARIOTableAdapter();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uSUARIOBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pCDataSet_usuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uSUARIOBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pCDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pCDataSet_usuario)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uSUARIOBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -103,6 +104,30 @@
             this.dataGridView1.Size = new System.Drawing.Size(414, 150);
             this.dataGridView1.TabIndex = 4;
             // 
+            // ID_USUARIO
+            // 
+            this.ID_USUARIO.DataPropertyName = "ID_USUARIO";
+            this.ID_USUARIO.HeaderText = "ID_USUARIO";
+            this.ID_USUARIO.Name = "ID_USUARIO";
+            this.ID_USUARIO.ReadOnly = true;
+            // 
+            // nMUSUARIODataGridViewTextBoxColumn
+            // 
+            this.nMUSUARIODataGridViewTextBoxColumn.DataPropertyName = "NM_USUARIO";
+            this.nMUSUARIODataGridViewTextBoxColumn.HeaderText = "NM_USUARIO";
+            this.nMUSUARIODataGridViewTextBoxColumn.Name = "nMUSUARIODataGridViewTextBoxColumn";
+            this.nMUSUARIODataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // uSUARIOBindingSource1
+            // 
+            this.uSUARIOBindingSource1.DataMember = "USUARIO";
+            this.uSUARIOBindingSource1.DataSource = this.pCDataSet_usuario;
+            // 
+            // pCDataSet_usuario
+            // 
+            this.pCDataSet_usuario.DataSetName = "PCDataSet_usuario";
+            this.pCDataSet_usuario.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // uSUARIOBindingSource
             // 
             this.uSUARIOBindingSource.DataMember = "USUARIO";
@@ -134,30 +159,6 @@
             // 
             this.usuarioTableAdapter2.ClearBeforeFill = true;
             // 
-            // ID_USUARIO
-            // 
-            this.ID_USUARIO.DataPropertyName = "ID_USUARIO";
-            this.ID_USUARIO.HeaderText = "ID_USUARIO";
-            this.ID_USUARIO.Name = "ID_USUARIO";
-            this.ID_USUARIO.ReadOnly = true;
-            // 
-            // nMUSUARIODataGridViewTextBoxColumn
-            // 
-            this.nMUSUARIODataGridViewTextBoxColumn.DataPropertyName = "NM_USUARIO";
-            this.nMUSUARIODataGridViewTextBoxColumn.HeaderText = "NM_USUARIO";
-            this.nMUSUARIODataGridViewTextBoxColumn.Name = "nMUSUARIODataGridViewTextBoxColumn";
-            this.nMUSUARIODataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // pCDataSet_usuario
-            // 
-            this.pCDataSet_usuario.DataSetName = "PCDataSet_usuario";
-            this.pCDataSet_usuario.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // uSUARIOBindingSource1
-            // 
-            this.uSUARIOBindingSource1.DataMember = "USUARIO";
-            this.uSUARIOBindingSource1.DataSource = this.pCDataSet_usuario;
-            // 
             // uSUARIOTableAdapter3
             // 
             this.uSUARIOTableAdapter3.ClearBeforeFill = true;
@@ -172,6 +173,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Usuario_tela";
             this.Text = "Usuario";
@@ -179,10 +181,10 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uSUARIOBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pCDataSet_usuario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uSUARIOBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pCDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pCDataSet_usuario)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uSUARIOBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

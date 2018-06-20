@@ -32,11 +32,11 @@ namespace Ponto_Chamados
                 comando.Parameters.Add(new SqlParameter("@cdproj", cod_projeto));
                 comando.Parameters.Add(new SqlParameter("@dscproj", desc_projeto));
                 //Abre a conexão
-                conexao.conectaBanco().Open();
+                conexao.conectaBanco();
                 //executa o comando com os parametros que foram adicionados acima
                 comando.ExecuteNonQuery();
                 //fecha a conexao
-                conexao.conectaBanco().Close();
+                conexao.fechaBanco();
                 // referente ao msgbox
                 MessageBox.Show("Cadastrado com Sucesso");
 

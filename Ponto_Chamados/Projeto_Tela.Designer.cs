@@ -29,9 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Projeto_Tela));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cadastrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.cODPROJETODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dESCPROJETODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pROJETOBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.pCDataSet_PROJETO_2 = new Ponto_Chamados.PCDataSet_PROJETO_2();
             this.pROJETOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pCDataSet_Projeto = new Ponto_Chamados.PCDataSet_Projeto();
             this.pCDataSet = new Ponto_Chamados.PCDataSet();
@@ -42,21 +47,17 @@
             this.pROJETOBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.uSUARIOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.uSUARIOTableAdapter = new Ponto_Chamados.PCDataSetTableAdapters.USUARIOTableAdapter();
-            this.pCDataSet_PROJETO_2 = new Ponto_Chamados.PCDataSet_PROJETO_2();
-            this.pROJETOBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.pROJETOTableAdapter1 = new Ponto_Chamados.PCDataSet_PROJETO_2TableAdapters.PROJETOTableAdapter();
-            this.cODPROJETODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dESCPROJETODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pROJETOBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pCDataSet_PROJETO_2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pROJETOBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pCDataSet_Projeto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pCDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pCDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pROJETOBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uSUARIOBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pCDataSet_PROJETO_2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pROJETOBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -92,6 +93,30 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(434, 157);
             this.dataGridView1.TabIndex = 1;
+            // 
+            // cODPROJETODataGridViewTextBoxColumn
+            // 
+            this.cODPROJETODataGridViewTextBoxColumn.DataPropertyName = "COD_PROJETO";
+            this.cODPROJETODataGridViewTextBoxColumn.HeaderText = "COD_PROJETO";
+            this.cODPROJETODataGridViewTextBoxColumn.Name = "cODPROJETODataGridViewTextBoxColumn";
+            this.cODPROJETODataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dESCPROJETODataGridViewTextBoxColumn
+            // 
+            this.dESCPROJETODataGridViewTextBoxColumn.DataPropertyName = "DESC_PROJETO";
+            this.dESCPROJETODataGridViewTextBoxColumn.HeaderText = "DESC_PROJETO";
+            this.dESCPROJETODataGridViewTextBoxColumn.Name = "dESCPROJETODataGridViewTextBoxColumn";
+            this.dESCPROJETODataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // pROJETOBindingSource2
+            // 
+            this.pROJETOBindingSource2.DataMember = "PROJETO";
+            this.pROJETOBindingSource2.DataSource = this.pCDataSet_PROJETO_2;
+            // 
+            // pCDataSet_PROJETO_2
+            // 
+            this.pCDataSet_PROJETO_2.DataSetName = "PCDataSet_PROJETO_2";
+            this.pCDataSet_PROJETO_2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // pROJETOBindingSource
             // 
@@ -148,33 +173,9 @@
             // 
             this.uSUARIOTableAdapter.ClearBeforeFill = true;
             // 
-            // pCDataSet_PROJETO_2
-            // 
-            this.pCDataSet_PROJETO_2.DataSetName = "PCDataSet_PROJETO_2";
-            this.pCDataSet_PROJETO_2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // pROJETOBindingSource2
-            // 
-            this.pROJETOBindingSource2.DataMember = "PROJETO";
-            this.pROJETOBindingSource2.DataSource = this.pCDataSet_PROJETO_2;
-            // 
             // pROJETOTableAdapter1
             // 
             this.pROJETOTableAdapter1.ClearBeforeFill = true;
-            // 
-            // cODPROJETODataGridViewTextBoxColumn
-            // 
-            this.cODPROJETODataGridViewTextBoxColumn.DataPropertyName = "COD_PROJETO";
-            this.cODPROJETODataGridViewTextBoxColumn.HeaderText = "COD_PROJETO";
-            this.cODPROJETODataGridViewTextBoxColumn.Name = "cODPROJETODataGridViewTextBoxColumn";
-            this.cODPROJETODataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dESCPROJETODataGridViewTextBoxColumn
-            // 
-            this.dESCPROJETODataGridViewTextBoxColumn.DataPropertyName = "DESC_PROJETO";
-            this.dESCPROJETODataGridViewTextBoxColumn.HeaderText = "DESC_PROJETO";
-            this.dESCPROJETODataGridViewTextBoxColumn.Name = "dESCPROJETODataGridViewTextBoxColumn";
-            this.dESCPROJETODataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // Projeto_Tela
             // 
@@ -185,6 +186,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Projeto_Tela";
             this.Text = "Projeto";
@@ -192,14 +194,14 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pROJETOBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pCDataSet_PROJETO_2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pROJETOBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pCDataSet_Projeto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pCDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pCDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pROJETOBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uSUARIOBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pCDataSet_PROJETO_2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pROJETOBindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

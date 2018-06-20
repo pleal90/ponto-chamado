@@ -18,6 +18,8 @@ namespace Ponto_Chamados
 
         private void Ponto_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'pCDataSet1_PONTO.DGV_PONTO' table. You can move, or remove it, as needed.
+            this.dGV_PONTOTableAdapter.Fill(this.pCDataSet1_PONTO.DGV_PONTO);
 
         }
 

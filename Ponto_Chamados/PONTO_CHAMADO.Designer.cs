@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PONTO_CHAMADO));
             this.btnPonto = new System.Windows.Forms.Button();
             this.btnChamado = new System.Windows.Forms.Button();
             this.btnTest = new System.Windows.Forms.Button();
@@ -92,14 +93,14 @@
             // usuáriosToolStripMenuItem
             // 
             this.usuáriosToolStripMenuItem.Name = "usuáriosToolStripMenuItem";
-            this.usuáriosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.usuáriosToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.usuáriosToolStripMenuItem.Text = "Usuários";
             this.usuáriosToolStripMenuItem.Click += new System.EventHandler(this.usuáriosToolStripMenuItem_Click);
             // 
             // projetosToolStripMenuItem
             // 
             this.projetosToolStripMenuItem.Name = "projetosToolStripMenuItem";
-            this.projetosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.projetosToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.projetosToolStripMenuItem.Text = "Projetos";
             this.projetosToolStripMenuItem.Click += new System.EventHandler(this.projetosToolStripMenuItem_Click);
             // 
@@ -119,6 +120,7 @@
             this.Controls.Add(this.btnChamado);
             this.Controls.Add(this.btnPonto);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "PONTO_CHAMADO";
             this.Text = "PONTO_CHAMADO";
